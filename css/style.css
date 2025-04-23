@@ -1,0 +1,445 @@
+:root {
+    --primary-color: #038655;
+    --secondary-color: #FAA916;
+    --light-color: #F3F3F3;
+    --dark-color: #333;
+    --category-sports: #F99500;
+    --category-ent: #A66BBE;
+    --category-tech: #009CFF;
+    --max-width: 1100px;
+}
+
+/**************************************************************************************************
+**************************** BASE STYLES **********************************************************
+**************************************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--light-color);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 0.7rem;
+    line-height: 1.3;
+    letter-spacing: .15rem;
+    word-spacing: .30rem;
+}
+
+
+::selection {
+    background: rgba(3,134,85, 0.8);
+    color: #FFF;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;    
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(3,134,85, 0.6);
+}
+
+
+/****************************************************************************************************
+************************************ UTILITY CLASSES ************************************************
+****************************************************************************************************/
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    /* padding: 0 2rem; */
+    overflow: hidden;
+}
+.card {
+    background: #FFF;
+    padding: 2rem;
+}
+.bg-light {
+    background: var(--light-color) !important;
+    color: var(--dark-color) !important;
+}
+.bg-dark {
+    background: var(--dark-color) !important;
+    color: #FFF !important;
+}
+.bg-primary {
+    background: var(--primary-color) !important;
+    color: #FFF !important;
+}
+
+.bg-secondary {
+    background: var(--secondary-color) !important;
+    color: #FFF !important;
+}
+
+.bg-dark a,
+.bg-primary a,
+.bg-secondary a {
+    color: #FFF;
+}
+
+.m-0 { margin: 0; }
+
+.py-1 { padding: 1.5rem 0 !important; }
+.py-2 { padding: 2rem 0 !important; }
+.py-3 { padding: 3rem 0; }
+
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.l-heading { font-size: 3rem; }
+.m-heading { font-size: 2.2rem; }
+.sm-heading { font-size: 1.7rem; }
+
+ul.list li {
+    padding: 0.5rem;
+    border-bottom: dotted 1px #444;
+}
+ul.list li a:hover {
+    color: var(--primary-color);
+}
+
+
+/****************************************************************************************************
+************************************ BUTTONS CLASSES ************************************************
+****************************************************************************************************/
+.btn {
+    display: inline-block;
+    border: none;
+    padding: .5rem 1.5rem;
+}
+.btn-block {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.btn-primary {
+    background: var(--primary-color);
+    color: #FFF;
+}
+.btn-secondary {
+    background: var(--secondary-color);
+    color: #FFF;
+}
+.btn-light {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+.btn-dark {
+    background: var(--dark-color);
+    color: #FFF;
+}
+.btn:hover {
+    opacity: 0.85;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+
+/************************************************************************************
+*********************************** NAVBAR ******************************************
+************************************************************************************/
+
+#navbar {
+    background-color: #FFF;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    max-width: var(--max-width);
+}
+
+#navbar .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+#navbar ul li a.inactive:hover{
+    background-color: rgb(230, 230, 230);
+    color: #333;
+}
+
+.logo {
+    width: 180px;
+}
+
+#navbar .social {
+    justify-self: center;
+}
+
+#navbar a {
+    padding: .6rem;
+}
+
+.facebook:hover {
+    color: #1877F2;
+}
+
+.twitter:hover {
+    color: #1DA1F2;
+}
+
+.linkedin:hover {
+    color: #0072b1;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: end;
+}
+
+#navbar ul li a.active {
+    background-color: var(--primary-color);
+    color: #FFF;
+}
+
+#navbar ul li a.active:hover {
+    background-color: var(--light-colorli);
+    color: #333;
+}
+
+/************************************************************************************
+****************************** CATEGORY *********************************************
+************************************************************************************/
+
+.category {
+    display: inline-block;
+    font-size: .65rem;
+    padding: .4rem .6rem;
+    text-transform: uppercase;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.category-sports {
+    background-color: var(--category-sports);
+}
+
+.category-ent {
+    background-color: var(--category-ent);
+}
+
+.category-tech {
+    background-color: var(--category-tech);
+}
+
+/************************************************************************************
+********************************* SHOWCASE ******************************************
+************************************************************************************/
+
+#showcase {
+    color: #fff;
+    position: relative;
+    margin-bottom: 2rem;
+    background: var(--dark-color) url(../images/featured.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#showcase::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+}
+
+#showcase .container {
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+#showcase .showcase-content {
+    z-index: 1;
+}
+
+/* .category {
+    display: inline-block;
+    font-size: .65rem;
+    padding: .4rem .6rem;
+    text-transform: uppercase;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.category-sports {
+    background-color: var(--category-sports);
+}
+
+.category-ent {
+    background-color: var(--category-ent);
+}
+
+.category-tech {
+    background-color: var(--category-tech);
+} */
+
+
+/************************************************************************************
+************************************ ARTICLES ***************************************
+************************************************************************************/
+
+#homeArticle .article-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    padding: 2rem; 
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+/* .card-grid:first-child {
+    grid-column: 1/span 2;
+}
+
+.card-grid:last-child {
+    grid-column: 2/span 2;
+} */
+#firstArticle { 
+    grid-column: 1/span 2;
+}
+
+#lastArticle {
+    grid-column: 2/span 2;
+}
+
+/************************************************************************************
+******************************* FOOTER **********************************************
+************************************************************************************/
+
+#mainFooter .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.btn-block {
+    width: 100%;
+    padding: .5rem;
+}
+
+#mainFooter .footer-container input[type ="email"] {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+#mainFooter .border {
+    padding: .5rem;
+    border-bottom: dotted .2px #a1a1a1;
+}
+
+#mainFooter a.btn-secondary {
+    padding: .5rem;
+    margin-top: 1rem;
+}
+
+/* .last {
+    background-color: rgb(87, 87, 87);
+    width: 100%;
+    padding: .2rem;
+    text-align: center;
+    grid-column: 1/span 4;
+} */
+
+#mainFooter .footer-container>*:last-child{
+    grid-column: 1/span 4;
+    background-color: #444;
+    text-align: center;
+    padding: .5rem 0;
+}
+
+#mainFooter .footer-container>*:last-child p {
+    margin-bottom: 0;
+}
+
+/************************************************************************************
+*********************************** ABOUT *******************************************
+************************************************************************************/
+
+#about .page-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2rem;
+    margin: 2rem 0;
+}
+
+#about ul a:hover {
+    color: var(--primary-color);
+}
+
+#about .border{
+    margin-top: 1rem;
+    border-bottom: dotted 1px var(--dark-color);
+}
+
+.align-start {
+    align-self: self-start;
+}
+
+.page-content>*:first-child {
+    grid-row: 1/span 3;
+}
+
+/* #singleArticle .car-row {
+    grid-row: 1/span;
+} */
+
+.width1 {
+    width: 100%; 
+    text-align: center;
+}
+
